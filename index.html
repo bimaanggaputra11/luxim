@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>露露蛙 - Lùlùwā</title>
+     <link rel="icon" type="image/png" href="images/5.png" 
+    >
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="welcome-screen">
+        <div class="social-links">
+                        <a href="https://x.com/luluwapetbsc"><img src="images/x.svg" width="50%" class="x"></i></a>
+                
+                        <a href="https://t.me/luluwabscpet"><img src="images/telegram.svg" width="50%" class="m"></i></a>
+                    </div>
+        <div class="welcome-card">
+            
+            <h1 class="welcome-title"> 露露蛙 - Lùlùwā</h1>
+            <p class="welcome-subtitle">Raise your beloved frog!</p>
+            
+            <div class="input-group">
+                <label for="petNameInput">Pet Name：</label>
+                <input 
+                    type="text" 
+                    id="petNameInput" 
+                    placeholder="Enter Pet Name..." 
+                    maxlength="15"
+                >
+            </div>
+            
+            <button id="startButton" class="btn-start">Start Game</button>
+
+            <div class="info-box">
+                <h3>📖 How to Play:</h3>
+                <ul>
+                    <li>• Feed your pet to make it grow</li>
+                    <li>•  First feeding can be done immediately</li>
+                    <li>• After that, there is a 5-minute cooldown.</li>
+                    <li>• Pets will evolve until they reach adulthood.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="game-screen hidden">
+        <div class="container">
+            <!-- Stats Panel -->
+            <div class="stats-panel">
+                <div class="stats-left">
+                    <h2 id="petNameDisplay" class="pet-name">Pet Name</h2>
+                    <p id="stageNameDisplay" class="stage-name">Egg</p>
+                </div>
+                CA : TBA
+                <div class="stats-right">
+                    <p class="stats-label">Growth Stage</p>
+                    <p id="stageNumber" class="stats-value">1/5</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span>Progress to the next stage</span>
+                    <span id="progressText">0/1</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="game-area">
+                <!-- Background layers -->
+                <div class="cloud-layer"></div>
+                <div class="water-layer-1"></div>
+                <div class="water-layer-2"></div>
+
+                <!-- Floating clouds -->
+                <div id="cloudsContainer" class="clouds-container"></div>
+
+                <!-- Pet Character -->
+                <div class="character-container">
+                    <div id="petNameTag" class="pet-name-tag">Pet Name</div>
+                    
+                    <!-- For stages 0-3 (swimming) -->
+                    <div id="swimmingCharacter" class="swimming-character">
+                        <div id="characterEmoji" class="character-emoji">🥚</div>
+                        <div id="waterDrops" class="water-drops">
+                          
+                        </div>
+                    </div>
+
+                    <!-- For stage 4 (on leaf) -->
+                    <div id="leafCharacter" class="leaf-character hidden">
+                        <div class="leaf">
+                            <div class="leaf-inner"></div>
+                            <div class="leaf-vein vein-1"></div>
+                            <div class="leaf-vein vein-2"></div>
+                        </div>
+                        <div id="characterOnLeaf" class="character-on-leaf"></div>
+                        <div class="leaf-shadow"></div>
+                    </div>
+                </div>
+
+                <!-- Message Popup -->
+                <div id="messagePopup" class="message-popup hidden">
+                    <p id="messageText"></p>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <button id="feedButton" class="btn-feed">🍖 Feed</button>
+                
+                <div class="stats-grid">
+                    <div class="stat-box stat-green">
+                        <p class="stat-label">Total Meals</p>
+                        <p id="totalFeed" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-box stat-blue">
+                        <p class="stat-label">Status</p>
+                        <p id="statusText" class="stat-status">🌱 Grow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
