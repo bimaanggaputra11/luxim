@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
     background: url(images/header\ \(4\).png);
     display: flex;
-    background-size:auto;
+    background-size:cover;
 
     align-items: center;
     justify-content: center;
